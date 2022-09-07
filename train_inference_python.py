@@ -103,8 +103,8 @@ def train_action_rec_model(train_network="ResNetLSTM", mode="image", cfg=None):
 
         ###NET
         net = pyvideo.slowfast.slowfast_16x8_r101_50_50()
-        modelPath = "SLOWFAST_16x8_R101_50_50.pyth"
-        net.load_state_dict(torch.load(modelPath)["model_state"])
+        #modelPath = "SLOWFAST_16x8_R101_50_50.pyth"
+        #net.load_state_dict(torch.load(modelPath)["model_state"])
         model = ActionBasicModule(cfg.device, net=net, classes = cfg.classes)
     
     elif train_network == 'ResNetLSTM':
