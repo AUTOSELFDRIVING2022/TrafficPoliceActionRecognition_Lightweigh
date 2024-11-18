@@ -11,11 +11,11 @@ import shutil
 # newCroppedPath = "/dataset/TrafficPoliceData_GIST/cropped_train/"
 # newCroppedPath2 = "/dataset/TrafficPoliceData_GIST/cropped_train2/"
 
-newCroppedPath2 = "/dataset/TrafficPoliceData_GIST/cropped_val2/"
-newCroppedPath2_g = "/dataset/TrafficPoliceData_GIST/cropped_val2_g/"
+#newCroppedPath2 = "/dataset/TrafficPoliceData_GIST/cropped_val2/"
+#newCroppedPath2_g = "/dataset/TrafficPoliceData_GIST/cropped_val2_g/"
 
-newCroppedPath2 = "/dataset/TrafficPoliceData_GIST/cropped_train2/"
-newCroppedPath2_g = "/dataset/TrafficPoliceData_GIST/cropped_train2_g/"
+newCroppedPath2 = "/dataset/Gist/Static_test_growth/"
+newCroppedPath2_g = "/dataset/Gist/Static_test_growth_g/"
 
 prepare_file = True
 if prepare_file:
@@ -27,10 +27,10 @@ if prepare_file:
         labelPathImg = sorted(glob2.glob(labels + "/*"))
         for folder in labelPathImg:
             for rep in range(4):
-                _fName = str(rep) + '_' + os.path.basename(folder)
+                #_fName = str(rep) + '_' + os.path.basename(folder)
+                _fName = os.path.basename(folder)[:-4] + '_' + str(rep) + '.jpg' 
                 newPath = os.path.join(newCroppedPath2_g,_label,_fName)
                 os.makedirs(os.path.dirname(newPath), exist_ok=True)
                 shutil.copy(folder, newPath)
         print(labelPathImg)
     print(filePathList)
-

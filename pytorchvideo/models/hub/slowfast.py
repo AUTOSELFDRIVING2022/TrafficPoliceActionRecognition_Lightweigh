@@ -143,11 +143,10 @@ def slowfast_16x8_r101_50_50(
         slowfast_fusion_conv_kernel_size=(5, 1, 1),
         stage_conv_a_kernel_sizes=stage_conv_a_kernel_sizes,
         #GZ test
-        #head_pool_kernel_sizes=((16, 7, 7), (64, 7, 7)),
-        head_pool_kernel_sizes=((8, 7, 7), (32, 7, 7)),
+        head_pool_kernel_sizes=((16, 7, 7), (64, 7, 7)),
+        #head_pool_kernel_sizes=((8, 7, 7), (32, 7, 7)),
         **kwargs,
     )
-
 
 def slowfast_r50_detection(
     pretrained: bool = False,
