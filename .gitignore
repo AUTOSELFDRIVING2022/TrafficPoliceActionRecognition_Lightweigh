@@ -141,3 +141,5 @@ lists/sthv2/val_rgb.txt
 valid_result.csv
 val_csv.csv
 SLOWFAST_16x8_R101_50_50.pyth
+submission/*
+submission/output.png
