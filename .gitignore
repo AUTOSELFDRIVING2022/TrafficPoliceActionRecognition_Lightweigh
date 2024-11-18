@@ -127,3 +127,17 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+data/cropped_val/*
+ckp/modeltype_ResNetAttention_image_best240725.pth
+ckp/modeltype_ResNetAttentionVisual_image_best240730.pth
+ckp/modeltype_ResNetAttentionVisual_image_wand_best.pth
+lists/k400/kinetics_rgb_train_se320.txt
+lists/k400/kinetics_rgb_val_se320.txt
+lists/sthv1/train_rgb.txt
+lists/sthv1/val_rgb.txt
+.vscode/launch.json
+lists/sthv2/train_rgb.txt
+lists/sthv2/val_rgb.txt
+valid_result.csv
+val_csv.csv
+SLOWFAST_16x8_R101_50_50.pyth
